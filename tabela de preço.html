@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Preços - Serviços de Refrigeração</title>
+    <!-- Carrega Tailwind CSS para estilização responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define a fonte Inter como padrão e cores primárias */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+        .text-primary-blue { color: #007bff; } /* Cor azul baseada no logo */
+        .bg-secondary-light { background-color: #e9ecef; } /* Cor de fundo leve */
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#007bff', 
+                        'dark-text': '#212529',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
+        
+        <!-- HEADER com Logo e Título -->
+        <header class="p-6 sm:p-8 bg-secondary-light border-b-4 border-primary-blue">
+            <div class="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+                <!-- Logo Esquerda -->
+                <img 
+                    src="logo Thermo.jpg" 
+                    alt="Logo Thermo" 
+                    class="w-32 h-auto sm:w-40 rounded-lg shadow-md"
+                    onerror="this.onerror=null; this.src='https://placehold.co/160x60/007bff/ffffff?text=Logo+Thermo'"
+                >
+                <!-- Título Centralizado -->
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-dark-text text-center leading-tight flex-1 mx-4">
+                    Tabela de Preços
+                    <br>
+                    <span class="text-primary-blue">Serviços de Refrigeração</span>
+                </h1>
+                <!-- Logo Direita (nova) -->
+                <img 
+                    src="logo2.jpg" 
+                    alt="Logo Secundária" 
+                    class="w-32 h-auto sm:w-40 rounded-lg shadow-md"
+                    onerror="this.onerror=null; this.src='https://placehold.co/160x60/007bff/ffffff?text=Logo+2'"
+                >
+            </div>
+        </header>
+
+        <!-- TABELA DE SERVIÇOS -->
+        <main class="p-4 sm:p-8">
+            <h2 class="text-xl font-bold mb-4 text-dark-text border-b pb-2">Nossos Serviços</h2>
+
+            <!-- Tabela Responsiva (Scrollable on small screens) -->
+            <div class="overflow-x-auto shadow-lg rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-primary-blue text-white">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider rounded-tl-lg">
+                                Serviço
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider hidden md:table-cell">
+                                Detalhes
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-right text-sm font-semibold uppercase tracking-wider">
+                                Preço
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider rounded-tr-lg hidden sm:table-cell">
+                                Observações
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-100 text-dark-text">
+                        
+                        <!-- Item 1: Visita Técnica -->
+                        <tr class="hover:bg-gray-50 transition duration-150">
+                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Visita Técnica</td>
+                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Avaliação e diagnóstico no local (1 hora)</td>
+                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 80,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Valor Fixo</td>
+                        </tr>
+                        
+                        <!-- Item 2: Recarga de Fluido -->
+                        <tr class="bg-secondary-light hover:bg-gray-100 transition duration-150">
+                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Recarga de Fluido Refrigerante</td>
+                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Até 750g</td>
+                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 280,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Preço para quantidades maiores a combinar.</td>
+                        </tr>
+
+                        <!-- Item 3: Substituição de Compressor -->
+                        <tr class="hover:bg-gray-50 transition duration-150">
+                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Substituição de Compressor</td>
+                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Até 3/4 HP</td>
+                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 380,00</td>
+                            <td class="px-6 py-4 text-sm text-red-600 font-medium hidden sm:table-cell">Peça não inclusa no valor.</td>
+                        </tr>
+
+                        <!-- Item 4: Instalação de Equipamento -->
+                        <tr class="bg-secondary-light hover:bg-gray-100 transition duration-150">
+                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Instalação de Equipamento</td>
+                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Até 18.000 BTUs</td>
+                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 750,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Conferir itens e complexidade da infraestrutura.</td>
+                        </tr>
+
+                        <!-- Item 5: Higienização Completa -->
+                        <tr class="hover:bg-gray-50 transition duration-150">
+                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Higienização Completa</td>
+                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Inclui limpeza de filtros, serpentina e turbina.</td>
+                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 150,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Ideal para manutenção preventiva.</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Legenda para mobile (para Detalhes) -->
+            <p class="text-xs text-gray-500 mt-2 block md:hidden">
+                *Role a tabela para ver as observações.
+            </p>
+        </main>
+
+        <!-- OBSERVAÇÕES IMPORTANTES -->
+        <footer class="p-6 sm:p-8 bg-gray-50 rounded-b-xl border-t">
+            <h3 class="text-lg font-bold mb-3 text-dark-text">Observações Importantes:</h3>
+            <ul class="list-disc ml-5 space-y-2 text-sm text-gray-700">
+                <li>Os preços são estimativas e podem variar de acordo com a complexidade do serviço e os materiais específicos utilizados.</li>
+                <li>Valores para **peças** e **materiais** não estão inclusos no preço do serviço, a menos que explicitamente especificados.</li>
+                <li>Em caso de serviços que demandem mais tempo ou materiais adicionais, um novo orçamento detalhado será apresentado antes da execução.</li>
+                <li>Oferecemos garantia de **3 meses** para os serviços prestados, cobrindo a mão de obra.</li>
+            </ul>
+            <p class="text-xs mt-4 text-gray-500 text-center">
+                *Tabela sujeita a alterações sem aviso prévio. Consulte sempre um técnico para um orçamento final.
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
