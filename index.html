@@ -30,7 +30,21 @@
 </head>
 <body class="bg-gray-100 min-h-screen">
 
-    <header class="bg-blue-600 shadow-lg py-12 md:py-20 text-white">
+    <!-- Menu de navegação fixo -->
+<nav class="sticky top-0 z-50 bg-white shadow-md">
+  <div class="container mx-auto px-4 flex items-center justify-between h-16">
+    <a href="#topo" class="font-bold text-blue-600 text-xl">Thermodinâmica</a>
+    <ul class="flex space-x-6">
+      <li><a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium">Serviços</a></li>
+      <li><a href="#depoimentos" class="text-gray-700 hover:text-blue-600 font-medium">Depoimentos</a></li>
+      <li><a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium">FAQ</a></li>
+      <li><a href="tabela.html" class="text-gray-700 hover:text-blue-600 font-medium">Tabela de Preços</a></li>
+      <li><a href="https://wa.me/5541991285241" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold hover:bg-green-600 transition">WhatsApp</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <header class="bg-blue-600 shadow-lg py-12 md:py-20 text-white" id="topo">
         <div class="container mx-auto px-4 text-center">
             
             <div class="mb-4">
@@ -51,7 +65,7 @@
         </div>
     </header>
 
-    <section class="py-16 md:py-24">
+    <section class="py-16 md:py-24" id="servicos">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Nossos Principais Serviços</h2>
             
@@ -120,42 +134,59 @@
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-gray-100">
+    <section class="py-16 md:py-24 bg-gray-100" id="depoimentos">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">O que Nossos Clientes Dizem</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-thermo-blue flex flex-col items-center justify-center text-center">
-                    <!-- Depoimentos dos clientes -->
-                    <img src="caroline_oliveira_depoimento.png" alt="Depoimento de cliente sobre manutenção de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-xs md:max-w-sm rounded-lg mb-2">
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-thermo-blue flex flex-col items-center justify-center text-center">
-                    <!-- Depoimentos dos clientes -->
-                    <img src="Eduardo_kambara.png" alt="Depoimento de cliente sobre instalação de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-xs md:max-w-sm rounded-lg mb-2">
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-thermo-blue flex flex-col items-center justify-center text-center">
-                    <!-- Depoimentos dos clientes -->
-                    <img src="bryan.png" alt="Depoimento de empresa sobre higienização de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-xs md:max-w-sm rounded-lg mb-2">
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-thermo-blue flex flex-col justify-center text-left">
-                    <p class="text-gray-600 italic mb-4">
-                        "Precisamos de um técnico com urgência e fomos atendidos na hora. O reparo foi rápido e com total transparência. Salvou nosso final de semana!"
-                    </p>
-                    <div class="flex items-center">
-                        <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
-                        <p class="font-semibold text-thermo-dark">Augusto de Souza.</p>
+            <div class="max-w-xl mx-auto relative">
+                <div id="carousel" class="overflow-hidden rounded-lg shadow-lg bg-white">
+                    <!-- Depoimento 1 -->
+                    <div class="testimonial p-6 flex flex-col items-center text-center">
+                        <img src="caroline_oliveira_depoimento.png" alt="Depoimento de cliente sobre manutenção de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue">
+                        <p class="text-gray-600 italic mb-4">"Ótimo atendimento e agilidade no atendimento. Máquina de lavar funcionando."</p>
+                        <div class="flex items-center justify-center">
+                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <p class="font-semibold text-thermo-dark">- Caroline Oliveira</p>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-1">19 de Setembro de 2023</p>
+                    </div>
+                    <!-- Depoimento 2 -->
+                    <div class="testimonial p-6 flex flex-col items-center text-center hidden">
+                        <img src="Eduardo_kambara.png" alt="Depoimento de cliente sobre instalação de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue">
+                        <p class="text-gray-600 italic mb-4">"Excelente serviço de instalação, rápido e eficiente."</p>
+                        <div class="flex items-center justify-center">
+                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <p class="font-semibold text-thermo-dark">- Eduardo Kambara</p>
+                        </div>
+                    </div>
+                    <!-- Depoimento 3 -->
+                    <div class="testimonial p-6 flex flex-col items-center text-center hidden">
+                        <img src="bryan.png" alt="Depoimento de empresa sobre higienização de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue">
+                        <p class="text-gray-600 italic mb-4">"Sempre nos atende com qualidade e rapidez."</p>
+                        <div class="flex items-center justify-center">
+                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <p class="font-semibold text-thermo-dark">- Bryan</p>
+                        </div>
+                    </div>
+                    <!-- Depoimento 4 -->
+                    <div class="testimonial p-6 flex flex-col items-center text-center hidden">
+                        <!-- Se quiser imagem, adicione aqui -->
+                        <p class="text-gray-600 italic mb-4">
+                            "Precisamos de um técnico com urgência e fomos atendidos na hora. O reparo foi rápido e com total transparência. Salvou nosso final de semana!"
+                        </p>
+                        <div class="flex items-center justify-center">
+                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <p class="font-semibold text-thermo-dark">Augusto de Souza.</p>
+                        </div>
                     </div>
                 </div>
-               
+                <!-- Botões de navegação -->
+                <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition">&lt;</button>
+                <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition">&gt;</button>
             </div>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-white">
+    <section class="py-16 md:py-24 bg-white" id="faq">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Perguntas Frequentes (FAQ)</h2>
             <div class="space-y-8 max-w-2xl mx-auto">
@@ -213,6 +244,21 @@
         </div>
     </section>
 
+    <section class="py-10 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">Trabalhamos com as principais marcas do mercado</h2>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <img src="logo_lg.png" alt="Ar condicionado LG" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
+                <img src="Samsung1.png" alt="Ar condicionado Samsung" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
+                <img src="carrier.png" alt="Ar condicionado Carrier" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
+                <img src="springer-logo-5.png" alt="Ar condicionado Springer" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
+                <img src="daikin.png" alt="Ar condicionado Daikin" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
+                <img src="fujitsu.png" alt="Ar condicionado Fujitsu" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
+                <!-- Adicione mais marcas conforme necessário -->
+            </div>
+        </div>
+    </section>
+
     <a href="https://wa.me/5541991285241?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20serviços%20da%20Thermodinâmica." 
        target="_blank" 
        class="fixed bottom-6 right-6 z-50 
@@ -229,5 +275,43 @@
         </div>
     </footer>
     
+<script>
+// filepath: c:\Users\marco\OneDrive\Documentos\GitHub\thermodinamica\index.html
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonials = document.querySelectorAll('.testimonial');
+    let current = 0;
+    let intervalId;
+
+    function showTestimonial(idx) {
+        testimonials.forEach((el, i) => {
+            el.classList.toggle('hidden', i !== idx);
+        });
+    }
+
+    function nextTestimonial() {
+        current = (current + 1) % testimonials.length;
+        showTestimonial(current);
+    }
+
+    document.getElementById('prev').onclick = () => {
+        current = (current - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(current);
+        resetInterval();
+    };
+    document.getElementById('next').onclick = () => {
+        nextTestimonial();
+        resetInterval();
+    };
+
+    function resetInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(nextTestimonial, 5000); // Troca a cada 5 segundos
+    }
+
+    // Inicializa
+    showTestimonial(current);
+    intervalId = setInterval(nextTestimonial, 5000); // Troca a cada 5 segundos
+});
+</script>
 </body>
 </html>
