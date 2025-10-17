@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thermodinâmica Refrigeração em Curitiba | Manutenção e Instalação HVAC</title>
     <meta name="description" content="Conforto garantido em Curitiba! Manutenção, instalação e higienização de ar condicionado. Orçamento rápido via WhatsApp. Técnicos certificados e transparência total.">
+    <meta name="robots" content="index, follow">
 
-    <!-- Tailwind CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -23,19 +27,19 @@
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            /* Certifique-se de que 'Inter' está sendo carregada via <link> acima */
+            font-family: 'Inter', sans-serif; 
             background-color: #f7f7f7;
         }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
 
-    <!-- Menu de navegação fixo -->
-<nav class="sticky top-0 z-50 bg-white shadow-md w-full"> 
+    <nav class="sticky top-0 z-50 bg-white shadow-md w-full"> 
     <div class="container mx-auto px-4 flex items-center justify-between h-16 max-w-full">
         
-        <a href="#topo" class="flex items-center space-x-2">
-            <img src="logo Thermo.jpg" alt="Logotipo Thermodinâmica Refrigeração" class="h-8 w-auto"> 
+        <a href="#topo" class="flex items-center space-x-2" aria-current="page">
+            <img src="logo Thermo.jpg" alt="Logotipo Thermodinâmica Refrigeração" class="h-8 w-auto" width="32" height="32"> 
             <span class="font-bold text-blue-600 text-xl">Thermodinâmica</span>
         </a>
         <ul class="hidden sm:flex space-x-6 items-center">
@@ -46,14 +50,15 @@
             
             <li>
                 <a href="https://www.instagram.com/thermodinamica_refrigeracao_?igsh=MWE5Z2N3b29vNWc0bQ==" 
-                   target="_blank" 
-                   aria-label="Instagram Thermodinâmica" 
-                   class="text-gray-700 hover:text-pink-500 font-medium p-2 transition">
-                    <span class="text-xl">📸</span> 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Instagram Thermodinâmica" 
+                    class="text-gray-700 hover:text-pink-500 font-medium p-2 transition">
+                     <span class="text-xl" role="img" aria-label="Ícone Instagram">📸</span> 
                 </a>
             </li>
 
-            <li><a href="https://wa.me/5541991285241" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition">WhatsApp</a></li>
+            <li><a href="https://wa.me/5541991285241" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition">WhatsApp</a></li>
             
         </ul>
         </div>
@@ -62,8 +67,10 @@
     <header class="bg-blue-600 shadow-lg py-12 md:py-20 text-white" id="topo">
         <div class="container mx-auto px-4 text-center max-w-full"> 
             <div class="mb-4">
-                <!-- Logo principal -->
-                <img src="logo Thermo.jpg" alt="Logotipo Thermodinâmica Refrigeração Curitiba" class="mx-auto w-32 md:w-40 h-auto">
+                <img src="logo Thermo.jpg" alt="Logotipo Thermodinâmica Refrigeração Curitiba - Serviços HVAC" 
+                     class="mx-auto w-32 md:w-40 h-auto" 
+                     width="160" height="160"
+                     fetchpriority="high">
             </div>
 
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
@@ -85,9 +92,8 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Manutenção Corretiva -->
                 <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-2xl transition duration-300">
-                    <div class="text-blue-600 text-3xl mb-4">🛠️</div>
+                    <div class="text-blue-600 text-3xl mb-4" role="img" aria-label="Ícone de Chave Inglesa e Martelo">🛠️</div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Manutenção Corretiva e Preventiva</h3>
                     <p class="text-gray-600 mb-2">
                         Nossa equipe especializada realiza conserto de ar condicionado, reparo de split e troca de peças em diversos modelos e marcas, como LG, Carrier, Daikin, Springer e Samsung. Atuamos no diagnóstico de falhas elétricas, vazamento de gás, ruídos excessivos e problemas no compressor, garantindo o funcionamento ideal do seu equipamento.
@@ -100,9 +106,8 @@
                     </p>
                 </div>
 
-                <!-- Higienização Completa -->
                 <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-2xl transition duration-300">
-                    <div class="text-blue-600 text-3xl mb-4">✨</div>
+                    <div class="text-blue-600 text-3xl mb-4" role="img" aria-label="Ícone de Estrela Cadente">✨</div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Higienização Completa</h3>
                     <p class="text-gray-600 mb-2">
                         Realizamos limpeza de ar condicionado e limpeza de split com foco na higienização de serpentina, filtros e turbina. Esse processo elimina fungos, bactérias e ácaros, melhorando significativamente a qualidade do ar no ambiente.
@@ -115,9 +120,8 @@
                     </p>
                 </div>
 
-                <!-- Instalação Profissional -->
                 <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-2xl transition duration-300">
-                    <div class="text-blue-600 text-3xl mb-4">⚙️</div>
+                    <div class="text-blue-600 text-3xl mb-4" role="img" aria-label="Ícone de Engrenagem">⚙️</div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Instalação Profissional</h3>
                     <p class="text-gray-600 mb-2">
                         Oferecemos instalação de split e instalação de ar condicionado em Curitiba e região, realizada por técnicos certificados e experientes. Garantimos a escolha correta do local para instalação, respeitando normas técnicas e garantindo segurança.
@@ -142,7 +146,10 @@
             </p>
 
             <p class="text-2xl font-semibold mb-4">Pronto para o Conforto?</p>
-            <a href="https://api.whatsapp.com/send?phone=+5541991285241&text=Olá! Gostaria de um orçamento para serviços de refrigeração." target="_blank" class="inline-block bg-green-500 text-white font-bold text-lg py-3 px-10 rounded-full shadow-xl hover:bg-green-600 transition duration-300">
+            <a href="https://api.whatsapp.com/send?phone=+5541991285241&text=Olá! Gostaria de um orçamento para serviços de refrigeração." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="inline-block bg-green-500 text-white font-bold text-lg py-3 px-10 rounded-full shadow-xl hover:bg-green-600 transition duration-300">
                 FALE CONOSCO PELO WHATSAPP
             </a>
         </div>
@@ -153,49 +160,52 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">O que Nossos Clientes Dizem</h2>
             <div class="max-w-xl mx-auto relative">
                 <div id="carousel" class="overflow-hidden rounded-lg shadow-lg bg-white">
-                    <!-- Depoimento 1 -->
                     <div class="testimonial p-6 flex flex-col items-center text-center">
-                        <img src="caroline_oliveira_depoimento.png" alt="Depoimento de cliente sobre manutenção de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue">
+                        <img src="caroline_oliveira_depoimento.png" alt="Depoimento de cliente Caroline Oliveira sobre manutenção de ar condicionado Thermodinâmica Curitiba" 
+                             class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue" 
+                             loading="lazy" width="400" height="200">
                         <p class="text-gray-600 italic mb-4">"Ótimo atendimento e agilidade no atendimento. Máquina de lavar funcionando."</p>
                         <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
                             <p class="font-semibold text-thermo-dark">- Caroline Oliveira</p>
                         </div>
                         <p class="text-gray-500 text-sm mt-1">19 de Setembro de 2023</p>
                     </div>
-                    <!-- Depoimento 2 -->
                     <div class="testimonial p-6 flex flex-col items-center text-center hidden">
-                        <img src="Eduardo_kambara.png" alt="Depoimento de cliente sobre instalação de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue">
+                        <img src="Eduardo_kambara.png" alt="Depoimento de cliente Eduardo Kambara sobre instalação de ar condicionado Thermodinâmica Curitiba" 
+                             class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue"
+                             loading="lazy" width="400" height="200">
                         <p class="text-gray-600 italic mb-4">"Excelente serviço de instalação, rápido e eficiente."</p>
                         <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
                             <p class="font-semibold text-thermo-dark">- Eduardo Kambara</p>
                         </div>
                     </div>
-                    <!-- Depoimento 3 -->
                     <div class="testimonial p-6 flex flex-col items-center text-center hidden">
-                        <img src="bryan.png" alt="Depoimento de empresa sobre higienização de ar condicionado Thermodinâmica Curitiba" class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue">
+                        <img src="bryan.png" alt="Depoimento de empresa Bryan sobre higienização de ar condicionado Thermodinâmica Curitiba" 
+                             class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue"
+                             loading="lazy" width="400" height="200">
                         <p class="text-gray-600 italic mb-4">"Sempre nos atende com qualidade e rapidez."</p>
                         <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
                             <p class="font-semibold text-thermo-dark">- Bryan</p>
                         </div>
                     </div>
-                    <!-- Depoimento 4 -->
                     <div class="testimonial p-6 flex flex-col items-center text-center hidden">
-                        <!-- Se quiser imagem, adicione aqui -->
+                        <div class="w-full max-w-md h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500">
+                            (Sem Imagem de Depoimento)
+                        </div>
                         <p class="text-gray-600 italic mb-4">
                             "Precisamos de um técnico com urgência e fomos atendidos na hora. O reparo foi rápido e com total transparência. Salvou nosso final de semana!"
                         </p>
                         <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2">⭐⭐⭐⭐⭐</span>
+                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
                             <p class="font-semibold text-thermo-dark">Augusto de Souza.</p>
                         </div>
                     </div>
                 </div>
-                <!-- Botões de navegação -->
-                <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition">&lt;</button>
-                <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition">&gt;</button>
+                <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Depoimento anterior">&lt;</button>
+                <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Próximo depoimento">&gt;</button>
             </div>
         </div>
     </section>
@@ -203,56 +213,61 @@
     <section class="py-16 md:py-24 bg-white" id="faq">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Perguntas Frequentes (FAQ)</h2>
-            <div class="space-y-8 max-w-2xl mx-auto">
+            <div class="space-y-8 max-w-2xl mx-auto" itemscope itemtype="https://schema.org/FAQPage">
                 
-                <!-- Higienização -->
-                <div>
-                    <h3 class="font-semibold text-lg text-thermo-blue mb-2">
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="font-semibold text-lg text-thermo-blue mb-2" itemprop="name">
                         1. De quanto em quanto tempo devo fazer a higienização do meu ar condicionado split em Curitiba?
                     </h3>
-                    <p class="text-gray-700">
-                        Para garantir a máxima qualidade do ar, a saúde respiratória de sua família ou equipe, e a eficiência do equipamento, recomendamos a higienização completa do ar condicionado a cada 3 a 6 meses de uso contínuo. Esse intervalo menor é ideal para a região de Curitiba, onde a umidade pode acelerar a proliferação de ácaros e fungos. Embora a ANVISA sugira um período maior, a manutenção frequente é a melhor forma de prevenir problemas de saúde e evitar o mau cheiro.
-                    </p>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="text-gray-700" itemprop="text">
+                            Para garantir a máxima qualidade do ar, a saúde respiratória de sua família ou equipe, e a eficiência do equipamento, recomendamos a higienização completa do ar condicionado a cada 3 a 6 meses de uso contínuo. Esse intervalo menor é ideal para a região de Curitiba, onde a umidade pode acelerar a proliferação de ácaros e fungos. Embora a ANVISA sugira um período maior, a manutenção frequente é a melhor forma de prevenir problemas de saúde e evitar o mau cheiro.
+                        </p>
+                    </div>
                 </div>
                 
-                <!-- Manutenção / Gás -->
-                <div>
-                    <h3 class="font-semibold text-lg text-thermo-blue mb-2">
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="font-semibold text-lg text-thermo-blue mb-2" itemprop="name">
                         2. O que fazer quando o ar condicionado não gela. Pode ser vazamento de gás?
                     </h3>
-                    <p class="text-gray-700">
-                        Se o ar condicionado não está gelando, pode ser sinal de vazamento de gás refrigerante. É fundamental solicitar uma avaliação técnica de um profissional certificado, pois o vazamento pode causar danos ao equipamento e riscos à saúde. Nunca tente resolver sozinho.
-                    </p>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="text-gray-700" itemprop="text">
+                            Se o ar condicionado não está gelando, pode ser sinal de vazamento de gás refrigerante. É fundamental solicitar uma avaliação técnica de um profissional certificado, pois o vazamento pode causar danos ao equipamento e riscos à saúde. Nunca tente resolver sozinho.
+                        </p>
+                    </div>
                 </div>
                 
-                <!-- Preventiva x Corretiva -->
-                <div>
-                    <h3 class="font-semibold text-lg text-thermo-blue mb-2">
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="font-semibold text-lg text-thermo-blue mb-2" itemprop="name">
                         3. Qual a diferença entre manutenção preventiva e corretiva?
                     </h3>
-                    <p class="text-gray-700">
-                        A manutenção preventiva envolve limpeza, checagem de componentes e ajustes regulares para evitar falhas e prolongar a vida útil do ar condicionado. Já a manutenção corretiva é realizada quando há algum problema, como pane elétrica ou vazamento, e exige reparo imediato.
-                    </p>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="text-gray-700" itemprop="text">
+                            A manutenção preventiva envolve limpeza, checagem de componentes e ajustes regulares para evitar falhas e prolongar a vida útil do ar condicionado. Já a manutenção corretiva é realizada quando há algum problema, como pane elétrica ou vazamento, e exige reparo imediato.
+                        </p>
+                    </div>
                 </div>
                 
-                <!-- Instalação / BTUs -->
-                <div>
-                    <h3 class="font-semibold text-lg text-thermo-blue mb-2">
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="font-semibold text-lg text-thermo-blue mb-2" itemprop="name">
                         4. Como é feito o cálculo de BTUs para escolher o ar condicionado ideal?
                     </h3>
-                    <p class="text-gray-700">
-                        O dimensionamento de BTUs considera o tamanho do ambiente, quantidade de pessoas, aparelhos eletrônicos e incidência solar. Um técnico certificado faz esse cálculo para garantir o máximo desempenho e economia de energia do seu ar condicionado.
-                    </p>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="text-gray-700" itemprop="text">
+                            O dimensionamento de BTUs considera o tamanho do ambiente, quantidade de pessoas, aparelhos eletrônicos e incidência solar. Um técnico certificado faz esse cálculo para garantir o máximo desempenho e economia de energia do seu ar condicionado.
+                        </p>
+                    </div>
                 </div>
                 
-                <!-- Serviços / Atendimento -->
-                <div>
-                    <h3 class="font-semibold text-lg text-thermo-blue mb-2">
+                <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="font-semibold text-lg text-thermo-blue mb-2" itemprop="name">
                         5. A Thermodinâmica atende empresas e residências na Grande Curitiba?
                     </h3>
-                    <p class="text-gray-700">
-                        Sim, a Thermodinâmica Refrigeração atende tanto empresas quanto residências em Curitiba e toda a região metropolitana, oferecendo serviços de manutenção, instalação e higienização de ar condicionado com qualidade e confiança.
-                    </p>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p class="text-gray-700" itemprop="text">
+                            Sim, a Thermodinâmica Refrigeração atende tanto empresas quanto residências em Curitiba e toda a região metropolitana, oferecendo serviços de manutenção, instalação e higienização de ar condicionado com qualidade e confiança.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -262,24 +277,25 @@
         <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">Trabalhamos com as principais marcas do mercado</h2>
             <div class="flex flex-wrap justify-center items-center gap-8">
-                <img src="logo_lg.png" alt="Ar condicionado LG" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
-                <img src="Samsung1.png" alt="Ar condicionado Samsung" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
-                <img src="carrier.png" alt="Ar condicionado Carrier" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
-                <img src="springer-logo-5.png" alt="Ar condicionado Springer" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
-                <img src="daikin.png" alt="Ar condicionado Daikin" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
-                <img src="fujitsu.png" alt="Ar condicionado Fujitsu" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy">
-                <!-- Adicione mais marcas conforme necessário -->
-            </div>
+                <img src="logo_lg.png" alt="Logotipo da marca de ar condicionado LG" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
+                <img src="Samsung1.png" alt="Logotipo da marca de ar condicionado Samsung" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
+                <img src="carrier.png" alt="Logotipo da marca de ar condicionado Carrier" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
+                <img src="springer-logo-5.png" alt="Logotipo da marca de ar condicionado Springer" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
+                <img src="daikin.png" alt="Logotipo da marca de ar condicionado Daikin" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
+                <img src="fujitsu.png" alt="Logotipo da marca de ar condicionado Fujitsu" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
+                </div>
         </div>
     </section>
 
     <a href="https://wa.me/5541991285241?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20serviços%20da%20Thermodinâmica." 
-       target="_blank" 
-       class="fixed bottom-6 right-6 z-50 
-              bg-green-500 hover:bg-green-600 transition duration-300
-              text-white font-bold p-3 rounded-full shadow-lg 
-              flex items-center space-x-2">
-        <span class="text-2xl">💬</span>
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 
+               bg-green-500 hover:bg-green-600 transition duration-300
+               text-white font-bold p-3 rounded-full shadow-lg 
+               flex items-center space-x-2"
+        aria-label="Fale Conosco pelo WhatsApp">
+        <span class="text-2xl" role="img" aria-label="Ícone de Balão de Chat">💬</span>
         <span class="hidden md:inline">Fale Conosco</span>
     </a>
 
@@ -287,9 +303,10 @@
     <div class="container mx-auto px-4 text-center">
         <div class="flex justify-center space-x-4 mb-4">
             <a href="https://www.instagram.com/thermodinamica_refrigeracao_?igsh=MWE5Z2N3b29vNWc0bQ==" 
-               target="_blank" 
-               aria-label="Siga a Thermodinâmica no Instagram" 
-               class="text-gray-400 hover:text-pink-500 transition duration-300 transform hover:scale-110">
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Siga a Thermodinâmica no Instagram" 
+                class="text-gray-400 hover:text-pink-500 transition duration-300 transform hover:scale-110">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                     <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.429a3.5 3.5 0 0 0-1.08 1.137c-.36.4-.644.925-.85 1.57A6.474 6.474 0 0 0 .048 4.703C.01 5.555 0 5.827 0 8.001s.01 2.443.048 3.295c.04.852.174 1.433.381 1.944a3.5 3.5 0 0 0 1.137 1.08c.4.36.925.644 1.57.85a6.474 6.474 0 0 0 1.944.383c.852.038 1.125.048 3.295.048s2.444-.01 3.296-.048c.851-.04 1.433-.174 1.944-.381a3.5 3.5 0 0 0 1.08-1.137c.36-.4.644-.925.85-1.57a6.474 6.474 0 0 0 .383-1.944c.038-.852.048-1.125.048-3.295s-.01-2.444-.048-3.296c-.04-.851-.174-1.433-.381-1.944a3.5 3.5 0 0 0-1.137-1.08c-.4-.36-.925-.644-1.57-.85A6.474 6.474 0 0 0 12.297.048C11.445.01 11.173 0 8 0zm0 1.637c2.193 0 2.478.007 3.344.045.748.037 1.25.163 1.574.387.411.282.696.67.89 1.11.196.44.298 1.01.336 1.76.038.866.045 1.15.045 3.344s-.007 2.478-.045 3.344c-.037.748-.163 1.25-.387 1.574-.282.411-.67.696-1.11.89-.44.196-1.01.298-1.76.336-.866.038-1.15.045-3.344.045s-2.478-.007-3.344-.045c-.748-.037-1.25-.163-1.574-.387a3.197 3.197 0 0 1-.89-1.11c-.196-.44-.298-1.01-.336-1.76-.038-.866-.045-1.15-.045-3.344s.007-2.478.045-3.344c.037-.748.163-1.25.387-1.574.282-.411.67-.696 1.11-.89.44-.196 1.01-.298 1.76-.336C5.522 1.637 5.807 1.637 8 1.637zm0 2.585c-2.416 0-4.378 1.962-4.378 4.378S5.584 12.978 8 12.978s4.378-1.962 4.378-4.378S10.416 4.222 8 4.222zm0 1.637c1.472 0 2.67 1.198 2.67 2.67s-1.198 2.67-2.67 2.67-2.67-1.198-2.67-2.67 1.198-2.67 2.67-2.67zm4.276-2.227a1.006 1.006 0 1 1 0 2.012 1.006 1.006 0 0 1 0-2.012z"/>
                 </svg>
@@ -332,12 +349,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function resetInterval() {
         clearInterval(intervalId);
-        intervalId = setInterval(nextTestimonial, 5000); // Troca a cada 5 segundos
+        // Otimização JS: Aumentar o tempo de intervalo para melhor experiência do usuário em carrossel.
+        intervalId = setInterval(nextTestimonial, 8000); // Trocado para 8 segundos
     }
 
     // Inicializa
     showTestimonial(current);
-    intervalId = setInterval(nextTestimonial, 5000); // Troca a cada 5 segundos
+    intervalId = setInterval(nextTestimonial, 8000); // Trocado para 8 segundos
 });
 </script>
 </body>
