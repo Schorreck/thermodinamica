@@ -26,9 +26,42 @@
 </script>
     <style>
         body {
-            /* Certifique-se de que 'Inter' está sendo carregada via <link> acima */
             font-family: 'Inter', sans-serif; 
-            background-color: #f7f7f7;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f0f5 100%);
+        }
+        
+        /* Gradient moderno para texto */
+        .gradient-text {
+            background: linear-gradient(135deg, #00b7ff, #0090d9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Efeito hover suave */
+        .hover-scale {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 183, 255, 0.15);
+        }
+        
+        /* Animação de entrada */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-in {
+            animation: slideInUp 0.6s ease-out;
         }
     </style>
     <script type="application/ld+json">
@@ -60,102 +93,116 @@
 </head>
 <body class="bg-gray-100 min-h-screen">
 
-    <nav class="sticky top-0 z-50 bg-white shadow-md w-full"> 
-    <div class="container mx-auto px-4 flex items-center justify-between h-16 max-w-full">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg w-full border-b border-gray-100"> 
+    <div class="container mx-auto px-4 flex items-center justify-between h-20 max-w-full">
         
-        <a href="index.html#topo" class="flex items-center space-x-2" aria-current="page">
-            <img src="logo Thermo.jpg" alt="Logotipo Thermodinâmica Refrigeração" class="h-8 w-auto" width="32" height="32"> 
-            <span class="font-bold text-blue-600 text-xl">Thermodinâmica</span>
+        <a href="index.html#topo" class="flex items-center space-x-3 hover-scale" aria-current="page">
+            <div class="relative">
+                <div class="absolute inset-0 bg-white/20 blur-lg rounded-lg"></div>
+                <img src="logo 3d.jpeg" alt="Logotipo Thermodinâmica Refrigeração" class="h-14 w-auto drop-shadow-lg relative z-10 rounded-lg" width="56" height="56">
+            </div> 
+            <span class="font-extrabold text-lg gradient-text hidden sm:inline">Thermodinâmica</span>
         </a>
-        <ul class="hidden sm:flex space-x-6 items-center">
-            <li><a href="#servicos" class="text-gray-700 hover:text-blue-600 font-medium">Serviços</a></li>
-            <li><a href="#depoimentos" class="text-gray-700 hover:text-blue-600 font-medium">Depoimentos</a></li>
-            <li><a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium">FAQ</a></li>
-            <li><a href="tabela.html" class="text-gray-700 hover:text-blue-600 font-medium">Tabela</a></li>
+        <ul class="hidden sm:flex space-x-8 items-center">
+            <li><a href="#servicos" class="text-gray-700 hover:gradient-text font-semibold transition duration-300">Serviços</a></li>
+            <li><a href="#depoimentos" class="text-gray-700 hover:gradient-text font-semibold transition duration-300">Depoimentos</a></li>
+            <li><a href="#faq" class="text-gray-700 hover:gradient-text font-semibold transition duration-300">FAQ</a></li>
+            <li><a href="tabela.html" class="text-gray-700 hover:gradient-text font-semibold transition duration-300">Tabela</a></li>
             
             <li>
                 <a href="https://www.instagram.com/thermodinamica_refrigeracao_?igsh=MWE5Z2N3b29vNWc0bQ==" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     aria-label="Instagram Thermodinâmica" 
-                    class="text-gray-700 hover:text-pink-500 font-medium p-2 transition">
+                    class="text-gray-700 hover:text-pink-500 font-semibold p-2 transition duration-300">
                      <span class="text-xl" role="img" aria-label="Ícone Instagram">📸</span> 
                 </a>
             </li>
 
-            <li><a href="https://wa.me/5541999361957" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-green-600 transition">WhatsApp</a></li>
+            <li><a href="https://wa.me/5541999361957" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-blue-500/50 transition duration-300">WhatsApp</a></li>
             
         </ul>
         </div>
 </nav>
 
-    <header class="bg-blue-600 shadow-lg py-12 md:py-20 text-white" id="topo">
-        <div class="container mx-auto px-4 text-center max-w-full"> 
-            <div class="mb-4">
-                <img src="logo Thermo.jpg" alt="Logotipo Thermodinâmica Refrigeração Curitiba - Serviços HVAC" 
-                     class="mx-auto w-32 md:w-40 h-auto" 
-                     width="160" height="160"
-                     fetchpriority="high">
+    <header class="relative overflow-hidden py-16 md:py-28 text-white" id="topo">
+        <!-- Gradient Background com efeito -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-500 to-blue-700 opacity-90"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 text-center max-w-full relative z-10">
+            <div class="mb-8 animate-in flex justify-center">
+                <div class="relative">
+                    <!-- Container com efeito de glow -->
+                    <div class="absolute inset-0 bg-white opacity-10 blur-3xl rounded-2xl scale-125"></div>
+                    <!-- Ring decorativo -->
+                    <div class="absolute inset-0 rounded-3xl border-2 border-white/30 scale-110"></div>
+                    <!-- Logo -->
+                    <img src="logo 3d.jpeg" alt="Logotipo Thermodinâmica Refrigeração Curitiba - Serviços HVAC" 
+                         class="mx-auto w-48 md:w-56 h-auto drop-shadow-2xl relative z-10 rounded-2xl" 
+                         width="224" height="224"
+                         fetchpriority="high">
+                </div>
             </div>
 
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
-                Thermodinâmica Refrigeração
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+                Thermodinâmica<br><span class="text-blue-200">Refrigeração</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 font-light">
+            <p class="text-xl md:text-2xl mb-12 font-light max-w-2xl mx-auto drop-shadow-md">
                 Conforto e Qualidade Garantidos. Seu ambiente na temperatura perfeita.
             </p>
 
-            <a href="tabela.html" class="inline-block bg-white text-blue-600 font-bold text-lg md:text-xl py-3 px-8 rounded-full shadow-xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
-                VER TABELA DE PREÇOS COMPLETA
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tabela.html" class="inline-block bg-white text-blue-600 font-bold text-lg md:text-xl py-4 px-10 rounded-full shadow-2xl hover:shadow-2xl hover:shadow-blue-500/50 transition duration-300 transform hover:scale-105">
+                    VER TABELA DE PREÇOS
+                </a>
+                <a href="https://wa.me/5541999361957" target="_blank" rel="noopener noreferrer" class="inline-block bg-white/20 border-2 border-white text-white font-bold text-lg md:text-xl py-4 px-10 rounded-full hover:bg-white/30 transition duration-300">
+                    FALE CONOSCO
+                </a>
+            </div>
         </div>
     </header>
 
-    <section class="py-16 md:py-24" id="servicos">
+    <section class="py-16 md:py-28" id="servicos">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Nossos Principais Serviços</h2>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-6">Nossos Principais Serviços</h2>
+            <p class="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+                Soluções completas em refrigeração com tecnologia de ponta e equipe especializada
+            </p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-2xl transition duration-300">
-                    <div class="text-blue-600 text-3xl mb-4" role="img" aria-label="Ícone de Chave Inglesa e Martelo">🛠️</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Manutenção Corretiva e Preventiva</h3>
-                    <p class="text-gray-600 mb-2">
-                        Nossa equipe especializada realiza conserto de ar condicionado, reparo de split e troca de peças em diversos modelos e marcas, como LG, Carrier, Daikin, Springer e Samsung. Atuamos no diagnóstico de falhas elétricas, vazamento de gás, ruídos excessivos e problemas no compressor, garantindo o funcionamento ideal do seu equipamento.
-                    </p>
-                    <p class="text-gray-600 mb-2">
-                        O serviço de manutenção corretiva identifica rapidamente a origem do problema, seja uma pane elétrica, desgaste de componentes ou vazamento de gás refrigerante. Utilizamos ferramentas modernas para garantir precisão no diagnóstico e agilidade no reparo.
+                <div class="group hover-scale bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 hover:shadow-2xl">
+                    <div class="text-blue-600 text-5xl mb-6 transition duration-300 group-hover:scale-110" role="img" aria-label="Ícone de Chave Inglesa e Martelo">🛠️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 group-hover:gradient-text">Manutenção Corretiva e Preventiva</h3>
+                    <p class="text-gray-600 mb-2 leading-relaxed">
+                        Nossa equipe especializada realiza conserto de ar condicionado, reparo de split e troca de peças em diversos modelos e marcas, como LG, Carrier, Daikin, Springer e Samsung.
                     </p>
                     <p class="text-gray-600">
-                        Além do reparo imediato, oferecemos manutenção preventiva para evitar futuras falhas, prolongando a vida útil do seu ar condicionado e reduzindo custos com consertos emergenciais.
+                        Utilizamos ferramentas modernas para garantir precisão no diagnóstico e agilidade no reparo, prolongando a vida útil do seu ar condicionado.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-2xl transition duration-300">
-                    <div class="text-blue-600 text-3xl mb-4" role="img" aria-label="Ícone de Estrela Cadente">✨</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Higienização Completa</h3>
-                    <p class="text-gray-600 mb-2">
-                        Realizamos limpeza de ar condicionado e limpeza de split com foco na higienização de serpentina, filtros e turbina. Esse processo elimina fungos, bactérias e ácaros, melhorando significativamente a qualidade do ar no ambiente.
-                    </p>
-                    <p class="text-gray-600 mb-2">
-                        A higienização completa é essencial para a saúde dos ocupantes, prevenindo alergias e problemas respiratórios. Utilizamos produtos específicos e técnicas avançadas para garantir a remoção de impurezas e o funcionamento eficiente do equipamento.
+                <div class="group hover-scale bg-white p-8 rounded-2xl shadow-lg border-t-4 border-cyan-500 hover:shadow-2xl">
+                    <div class="text-cyan-600 text-5xl mb-6 transition duration-300 group-hover:scale-110" role="img" aria-label="Ícone de Estrela Cadente">✨</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 group-hover:gradient-text">Higienização Completa</h3>
+                    <p class="text-gray-600 mb-2 leading-relaxed">
+                        Realizamos limpeza de ar condicionado e limpeza de split com foco na higienização de serpentina, filtros e turbina, eliminando fungos, bactérias e ácaros.
                     </p>
                     <p class="text-gray-600">
-                        Recomenda-se realizar a higienização regularmente para manter o desempenho do ar condicionado, evitar odores desagradáveis e garantir a máxima eficiência energética.
+                        Melhoramos significativamente a qualidade do ar e prevenimos alergias e problemas respiratórios da sua família.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-500 hover:shadow-2xl transition duration-300">
-                    <div class="text-blue-600 text-3xl mb-4" role="img" aria-label="Ícone de Engrenagem">⚙️</div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Instalação Profissional</h3>
-                    <p class="text-gray-600 mb-2">
-                        Oferecemos instalação de split e instalação de ar condicionado em Curitiba e região, realizada por técnicos certificados e experientes. Garantimos a escolha correta do local para instalação, respeitando normas técnicas e garantindo segurança.
-                    </p>
-                    <p class="text-gray-600 mb-2">
-                        Antes da instalação, realizamos o dimensionamento de BTUs, calculando a capacidade ideal para o seu ambiente. Isso assegura máximo desempenho, economia de energia e conforto térmico.
+                <div class="group hover-scale bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 hover:shadow-2xl">
+                    <div class="text-blue-600 text-5xl mb-6 transition duration-300 group-hover:scale-110" role="img" aria-label="Ícone de Engrenagem">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900 group-hover:gradient-text">Instalação Profissional</h3>
+                    <p class="text-gray-600 mb-2 leading-relaxed">
+                        Oferecemos instalação de split e ar condicionado por técnicos certificados, com dimensionamento correto de BTUs para máximo desempenho.
                     </p>
                     <p class="text-gray-600">
-                        Conte com nossa equipe para uma instalação rápida, limpa e eficiente, com garantia de serviço e suporte pós-instalação para qualquer dúvida ou ajuste necessário.
+                        Garantimos uma instalação rápida, limpa e eficiente, com suporte pós-instalação e economia de energia comprovada.
                     </p>
                 </div>
 
@@ -163,82 +210,110 @@
         </div>
     </section>
 
-    <section class="bg-gray-800 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Por Que Escolher a Thermodinâmica?</h2>
-            <p class="text-lg mb-8 max-w-3xl mx-auto">
-                Somos especialistas em refrigeração, dedicados a oferecer soluções duradouras, atuamos na grande capital Curitiba e Regiões Metropolitanas, temos preços justos com qualidade e confiança. Atendemos residências, comércio e empresas.
+    <section class="relative py-16 md:py-28 overflow-hidden">
+        <!-- Gradient background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 opacity-95"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500 opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-white">Por Que Escolher a Thermodinâmica?</h2>
+            <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Somos especialistas em refrigeração, dedicados a oferecer soluções duradouras em Curitiba e região. Preços justos com qualidade comprovada. Atendemos residências, comércio e empresas com transparência total.
             </p>
 
-            <p class="text-2xl font-semibold mb-4">Pronto para o Conforto?</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 transition">
+                    <div class="text-3xl mb-3">👨‍🔧</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Técnicos Certificados</h3>
+                    <p class="text-gray-300 text-sm">Equipe especializada e experiente</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 transition">
+                    <div class="text-3xl mb-3">⚡</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Resposta Rápida</h3>
+                    <p class="text-gray-300 text-sm">Atendimento ágil quando você precisa</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/15 transition">
+                    <div class="text-3xl mb-3">✅</div>
+                    <h3 class="text-white font-bold text-lg mb-2">Garantia de Qualidade</h3>
+                    <p class="text-gray-300 text-sm">Serviços com padrão premium</p>
+                </div>
+            </div>
+
+            <p class="text-2xl font-bold mb-8 text-white">Pronto para o Conforto?</p>
             <a href="https://api.whatsapp.com/send?phone=+5541999361957&text=Olá! Gostaria de um orçamento para o serviço de refrigeração." 
                target="_blank" 
                rel="noopener noreferrer"
-               class="inline-block bg-green-500 text-white font-bold text-lg py-3 px-10 rounded-full shadow-xl hover:bg-green-600 transition duration-300">
+               class="inline-block bg-gradient-to-r from-green-400 to-green-500 text-white font-bold text-lg py-4 px-12 rounded-full shadow-2xl hover:shadow-green-500/50 transition duration-300 transform hover:scale-105">
                 FALE CONOSCO PELO WHATSAPP
             </a>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-gray-100" id="depoimentos">
+    <section class="py-16 md:py-28 bg-gradient-to-b from-gray-100 to-white" id="depoimentos">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">O que Nossos Clientes Dizem</h2>
-            <div class="max-w-xl mx-auto relative">
-                <div id="carousel" class="overflow-hidden rounded-lg shadow-lg bg-white" aria-live="polite" aria-atomic="true" aria-label="Depoimentos de clientes">
-                    <div class="testimonial p-6 flex flex-col items-center text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-6">O que Nossos Clientes Dizem</h2>
+            <p class="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+                Satisfação garantida com qualidade e transparência em cada serviço
+            </p>
+            <div class="max-w-2xl mx-auto relative">
+                <div id="carousel" class="overflow-hidden rounded-2xl shadow-2xl bg-white" aria-live="polite" aria-atomic="true" aria-label="Depoimentos de clientes">
+                    <div class="testimonial p-8 flex flex-col items-center text-center">
                         <img src="caroline_oliveira_depoimento.png" alt="Depoimento de cliente Caroline Oliveira sobre manutenção de ar condicionado Thermodinâmica Curitiba" 
-                             class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue" 
+                             class="w-full max-w-md rounded-xl mb-6 ring-4 ring-blue-500 shadow-lg" 
                              loading="lazy" width="400" height="200">
-                        <p class="text-gray-600 italic mb-4">"Ótimo atendimento e agilidade no atendimento. Máquina de lavar funcionando."</p>
-                        <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
-                            <p class="font-semibold text-thermo-dark">- Caroline Oliveira</p>
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">"Ótimo atendimento e agilidade no atendimento. Máquina de lavar funcionando."</p>
+                        <div class="flex items-center justify-center gap-3">
+                            <span class="text-yellow-400 text-2xl" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
+                            <p class="font-bold text-gray-900 text-lg">Caroline Oliveira</p>
                         </div>
-                        <p class="text-gray-500 text-sm mt-1">19 de Setembro de 2023</p>
+                        <p class="text-gray-500 text-sm mt-3">19 de Setembro de 2023</p>
                     </div>
-                    <div class="testimonial p-6 flex flex-col items-center text-center hidden">
+                    <div class="testimonial p-8 flex flex-col items-center text-center hidden">
                         <img src="Eduardo_kambara.png" alt="Depoimento de cliente Eduardo Kambara sobre instalação de ar condicionado Thermodinâmica Curitiba" 
-                             class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue"
+                             class="w-full max-w-md rounded-xl mb-6 ring-4 ring-blue-500 shadow-lg"
                              loading="lazy" width="400" height="200">
-                        <p class="text-gray-600 italic mb-4">"Excelente serviço de instalação, rápido e eficiente."</p>
-                        <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
-                            <p class="font-semibold text-thermo-dark">- Eduardo Kambara</p>
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">"Excelente serviço de instalação, rápido e eficiente."</p>
+                        <div class="flex items-center justify-center gap-3">
+                            <span class="text-yellow-400 text-2xl" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
+                            <p class="font-bold text-gray-900 text-lg">Eduardo Kambara</p>
                         </div>
                     </div>
-                    <div class="testimonial p-6 flex flex-col items-center text-center hidden">
+                    <div class="testimonial p-8 flex flex-col items-center text-center hidden">
                         <img src="bryan.png" alt="Depoimento de empresa Bryan sobre higienização de ar condicionado Thermodinâmica Curitiba" 
-                             class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue"
+                             class="w-full max-w-md rounded-xl mb-6 ring-4 ring-blue-500 shadow-lg"
                              loading="lazy" width="400" height="200">
-                        <p class="text-gray-600 italic mb-4">"Sempre nos atende com qualidade e rapidez."</p>
-                        <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
-                            <p class="font-semibold text-thermo-dark">- Bryan</p>
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">"Sempre nos atende com qualidade e rapidez."</p>
+                        <div class="flex items-center justify-center gap-3">
+                            <span class="text-yellow-400 text-2xl" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
+                            <p class="font-bold text-gray-900 text-lg">Bryan</p>
                         </div>
                     </div>
-                    <div class="testimonial p-6 flex flex-col items-center text-center hidden">
-                        <div class="w-full max-w-md h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500" role="img" aria-label="Imagem não disponível para o depoimento de Augusto de Souza">
-                            <span class="font-medium">Imagem não disponível</span>
+                    <div class="testimonial p-8 flex flex-col items-center text-center hidden">
+                        <div class="w-full max-w-md h-40 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl mb-6 flex items-center justify-center text-gray-500 ring-4 ring-blue-500" role="img" aria-label="Imagem não disponível para o depoimento de Augusto de Souza">
+                            <span class="font-medium text-lg">👤</span>
                         </div>
-                        <p class="text-gray-600 italic mb-4">
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">
                             "Precisamos de um técnico com urgência e fomos atendidos na hora. O reparo foi rápido e com total transparência. Salvou nosso final de semana!"
                         </p>
-                        <div class="flex items-center justify-center">
-                            <span class="text-yellow-400 text-xl mr-2" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
-                            <p class="font-semibold text-thermo-dark">Augusto de Souza.</p>
+                        <div class="flex items-center justify-center gap-3">
+                            <span class="text-yellow-400 text-2xl" role="img" aria-label="5 estrelas">⭐⭐⭐⭐⭐</span>
+                            <p class="font-bold text-gray-900 text-lg">Augusto de Souza</p>
                         </div>
                     </div>
                 </div>
-                <button id="prev" type="button" class="absolute left-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Depoimento anterior">&lt;</button>
-                <button id="next" type="button" class="absolute right-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Próximo depoimento">&gt;</button>
+                <button id="prev" type="button" class="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-blue-500/50 transition transform hover:scale-110" aria-label="Depoimento anterior">&lt;</button>
+                <button id="next" type="button" class="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-blue-500/50 transition transform hover:scale-110" aria-label="Próximo depoimento">&gt;</button>
             </div>
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-white" id="faq">
+    <section class="py-16 md:py-28 bg-white" id="faq">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Perguntas Frequentes (FAQ)</h2>
-            <div class="space-y-8 max-w-2xl mx-auto" itemscope itemtype="https://schema.org/FAQPage">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-6">Perguntas Frequentes</h2>
+            <p class="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+                Dúvidas sobre nossos serviços? Encontre respostas aqui
+            </p>
+            <div class="space-y-6 max-w-3xl mx-auto" itemscope itemtype="https://schema.org/FAQPage">
                 
                 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <h3 class="font-semibold text-lg text-thermo-blue mb-2" itemprop="name">
@@ -309,16 +384,16 @@
         </div>
     </section>
 
-    <section class="py-10 bg-white">
+    <section class="py-10 bg-gradient-to-r from-gray-50 to-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">Trabalhamos com as principais marcas do mercado</h2>
-            <div class="flex flex-wrap justify-center items-center gap-8">
-                <img src="logo_lg.png" alt="Logotipo da marca de ar condicionado LG" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
-                <img src="Samsung1.png" alt="Logotipo da marca de ar condicionado Samsung" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
-                <img src="carrier.png" alt="Logotipo da marca de ar condicionado Carrier" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
-                <img src="springer-logo-5.png" alt="Logotipo da marca de ar condicionado Springer" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
-                <img src="daikin.png" alt="Logotipo da marca de ar condicionado Daikin" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
-                <img src="fujitsu.png" alt="Logotipo da marca de ar condicionado Fujitsu" class="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition" loading="lazy" width="96" height="64">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">Trabalhamos com as Principais Marcas</h2>
+            <div class="flex flex-wrap justify-center items-center gap-10">
+                <img src="logo_lg.png" alt="Logotipo da marca de ar condicionado LG" class="h-14 md:h-16 w-auto grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110" loading="lazy" width="96" height="64">
+                <img src="Samsung1.png" alt="Logotipo da marca de ar condicionado Samsung" class="h-14 md:h-16 w-auto grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110" loading="lazy" width="96" height="64">
+                <img src="carrier.png" alt="Logotipo da marca de ar condicionado Carrier" class="h-14 md:h-16 w-auto grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110" loading="lazy" width="96" height="64">
+                <img src="springer-logo-5.png" alt="Logotipo da marca de ar condicionado Springer" class="h-14 md:h-16 w-auto grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110" loading="lazy" width="96" height="64">
+                <img src="daikin.png" alt="Logotipo da marca de ar condicionado Daikin" class="h-14 md:h-16 w-auto grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110" loading="lazy" width="96" height="64">
+                <img src="fujitsu.png" alt="Logotipo da marca de ar condicionado Fujitsu" class="h-14 md:h-16 w-auto grayscale hover:grayscale-0 transition duration-300 transform hover:scale-110" loading="lazy" width="96" height="64">
                 </div>
         </div>
     </section>
@@ -327,30 +402,46 @@
         target="_blank" 
         rel="noopener noreferrer"
         class="fixed bottom-6 right-6 z-50 
-               bg-green-500 hover:bg-green-600 transition duration-300
-               text-white font-bold p-3 rounded-full shadow-lg 
-               flex items-center space-x-2"
+               bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 transition duration-300
+               text-white font-bold p-4 rounded-full shadow-2xl hover:shadow-green-500/50
+               flex items-center space-x-2 transform hover:scale-110"
         aria-label="Fale Conosco pelo WhatsApp">
         <span class="text-2xl" role="img" aria-label="Ícone de Balão de Chat">💬</span>
         <span class="hidden md:inline">Fale Conosco</span>
     </a>
 
-   <footer class="bg-gray-900 text-gray-400 py-6">
-    <div class="container mx-auto px-4 text-center">
-        <div class="flex justify-center space-x-4 mb-4">
-            <a href="https://www.instagram.com/thermodinamica_refrigeracao_?igsh=MWE5Z2N3b29vNWc0bQ==" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Siga a Thermodinâmica no Instagram" 
-                class="text-gray-400 hover:text-pink-500 transition duration-300 transform hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.429a3.5 3.5 0 0 0-1.08 1.137c-.36.4-.644.925-.85 1.57A6.474 6.474 0 0 0 .048 4.703C.01 5.555 0 5.827 0 8.001s.01 2.443.048 3.295c.04.852.174 1.433.381 1.944a3.5 3.5 0 0 0 1.137 1.08c.4.36.925.644 1.57.85a6.474 6.474 0 0 0 1.944.383c.852.038 1.125.048 3.295.048s2.444-.01 3.296-.048c.851-.04 1.433-.174 1.944-.381a3.5 3.5 0 0 0 1.08-1.137c.36-.4.644-.925.85-1.57a6.474 6.474 0 0 0 .383-1.944c.038-.852.048-1.125.048-3.295s-.01-2.444-.048-3.296c-.04-.851-.174-1.433-.381-1.944a3.5 3.5 0 0 0-1.137-1.08c-.4-.36-.925-.644-1.57-.85A6.474 6.474 0 0 0 12.297.048C11.445.01 11.173 0 8 0zm0 1.637c2.193 0 2.478.007 3.344.045.748.037 1.25.163 1.574.387.411.282.696.67.89 1.11.196.44.298 1.01.336 1.76.038.866.045 1.15.045 3.344s-.007 2.478-.045 3.344c-.037.748-.163 1.25-.387 1.574-.282.411-.67.696-1.11.89-.44.196-1.01.298-1.76.336-.866.038-1.15.045-3.344.045s-2.478-.007-3.344-.045c-.748-.037-1.25-.163-1.574-.387a3.197 3.197 0 0 1-.89-1.11c-.196-.44-.298-1.01-.336-1.76-.038-.866-.045-1.15-.045-3.344s.007-2.478.045-3.344c.037-.748.163-1.25.387-1.574.282-.411.67-.696 1.11-.89.44-.196 1.01-.298 1.76-.336C5.522 1.637 5.807 1.637 8 1.637zm0 2.585c-2.416 0-4.378 1.962-4.378 4.378S5.584 12.978 8 12.978s4.378-1.962 4.378-4.378S10.416 4.222 8 4.222zm0 1.637c1.472 0 2.67 1.198 2.67 2.67s-1.198 2.67-2.67 2.67-2.67-1.198-2.67-2.67 1.198-2.67 2.67-2.67zm4.276-2.227a1.006 1.006 0 1 1 0 2.012 1.006 1.006 0 0 1 0-2.012z"/>
-                </svg>
-            </a>
+   <footer class="bg-gradient-to-b from-gray-900 to-gray-950 text-gray-300 py-8 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+            <div class="mb-4 md:mb-0">
+                <p class="font-bold text-white text-lg mb-1">Thermodinâmica Refrigeração</p>
+                <p class="text-sm">Conforto e qualidade garantidos</p>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/thermodinamica_refrigeracao_?igsh=MWE5Z2N3b29vNWc0bQ==" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Siga a Thermodinâmica no Instagram" 
+                    class="text-gray-400 hover:text-pink-500 transition duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.429a3.5 3.5 0 0 0-1.08 1.137c-.36.4-.644.925-.85 1.57A6.474 6.474 0 0 0 .048 4.703C.01 5.555 0 5.827 0 8.001s.01 2.443.048 3.295c.04.852.174 1.433.381 1.944a3.5 3.5 0 0 0 1.137 1.08c.4.36.925.644 1.57.85a6.474 6.474 0 0 0 1.944.383c.852.038 1.125.048 3.295.048s2.444-.01 3.296-.048c.851-.04 1.433-.174 1.944-.381a3.5 3.5 0 0 0 1.08-1.137c.36-.4.644-.925.85-1.57a6.474 6.474 0 0 0 .383-1.944c.038-.852.048-1.125.048-3.295s-.01-2.444-.048-3.296c-.04-.851-.174-1.433-.381-1.944a3.5 3.5 0 0 0-1.137-1.08c-.4-.36-.925-.644-1.57-.85A6.474 6.474 0 0 0 12.297.048C11.445.01 11.173 0 8 0zm0 1.637c2.193 0 2.478.007 3.344.045.748.037 1.25.163 1.574.387.411.282.696.67.89 1.11.196.44.298 1.01.336 1.76.038.866.045 1.15.045 3.344s-.007 2.478-.045 3.344c-.037.748-.163 1.25-.387 1.574-.282.411-.67.696-1.11.89-.44.196-1.01.298-1.76.336-.866.038-1.15.045-3.344.045s-2.478-.007-3.344-.045c-.748-.037-1.25-.163-1.574-.387a3.197 3.197 0 0 1-.89-1.11c-.196-.44-.298-1.01-.336-1.76-.038-.866-.045-1.15-.045-3.344s.007-2.478.045-3.344c.037-.748.163-1.25.387-1.574.282-.411.67-.696 1.11-.89.44-.196 1.01-.298 1.76-.336C5.522 1.637 5.807 1.637 8 1.637zm0 2.585c-2.416 0-4.378 1.962-4.378 4.378S5.584 12.978 8 12.978s4.378-1.962 4.378-4.378S10.416 4.222 8 4.222zm0 1.637c1.472 0 2.67 1.198 2.67 2.67s-1.198 2.67-2.67 2.67-2.67-1.198-2.67-2.67 1.198-2.67 2.67-2.67zm4.276-2.227a1.006 1.006 0 1 1 0 2.012 1.006 1.006 0 0 1 0-2.012z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5541999361957" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp Thermodinâmica" 
+                    class="text-gray-400 hover:text-green-400 transition duration-300 transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.099-.198-.01-.304.076-.403.077-.099.197-.247.296-.371.099-.124.133-.214.198-.356.066-.142.033-.266-.033-.371-.099-.107-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.471.205.84.326 1.126.403.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
 
-        <div class="text-sm">
-            &copy; 2025 Thermodinâmica Refrigeração. Todos os direitos reservados. | Desenvolvido por Schorreck.
+        <div class="border-t border-gray-800 pt-6 text-center text-sm">
+            <p>&copy; 2025 Thermodinâmica Refrigeração. Todos os direitos reservados.</p>
+            <p class="text-gray-500 mt-2">Desenvolvido por <a href="#" class="text-blue-400 hover:text-blue-300">Schorreck</a></p>
         </div>
     </div>
 </footer>

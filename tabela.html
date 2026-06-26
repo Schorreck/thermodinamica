@@ -7,13 +7,26 @@
     <!-- Carrega Tailwind CSS para estilização responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Define a fonte Inter como padrão e cores primárias */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f7f9;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f0f5 100%);
         }
-        .text-primary-blue { color: #007bff; } /* Cor azul baseada no logo */
-        .bg-secondary-light { background-color: #e9ecef; } /* Cor de fundo leve */
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #00b7ff, #0090d9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-scale {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 183, 255, 0.15);
+        }
     </style>
     <script>
         tailwind.config = {
@@ -22,161 +35,177 @@
                     colors: {
                         'primary-blue': '#007bff', 
                         'dark-text': '#212529',
-                        'thermo-blue': '#007bff',
-                        'thermo-dark': '#0056b3',
+                        'thermo-blue': '#00b7ff',
+                        'thermo-dark': '#0090d9',
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="p-4 sm:p-8">
+<body class="min-h-screen">
 
-    <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
         
         <!-- HEADER com Logo e Título -->
-        <header class="p-6 sm:p-8 bg-secondary-light border-b-4 border-primary-blue">
-            <div class="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+        <header class="bg-gradient-to-br from-blue-600 via-cyan-500 to-blue-700 p-8 sm:p-12 border-b-4 border-blue-800">
+            <div class="flex flex-col sm:flex-row items-center justify-between space-y-6 sm:space-y-0">
                 <!-- Logo Esquerda -->
-                <img 
-                    src="logo Thermo.jpg" 
-                    alt="Logo Thermo" 
-                    class="w-32 h-auto sm:w-40 rounded-lg shadow-md"
-                    onerror="this.onerror=null; this.src='https://placehold.co/160x60/007bff/ffffff?text=Logo+Thermo'"
-                >
+                <a href="index.html" aria-label="Ir para a página inicial" class="hover-scale">
+                    <img 
+                        src="logo 3d.jpeg" 
+                        alt="Logo Thermo" 
+                        class="w-32 h-auto sm:w-40 rounded-lg shadow-lg drop-shadow-xl"
+                        onerror="this.onerror=null; this.src='https://placehold.co/160x60/007bff/ffffff?text=Logo+Thermo'"
+                    >
+                </a>
                 <!-- Título Centralizado -->
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-dark-text text-center leading-tight flex-1 mx-4">
-                    Tabela de Preços
-                    <br>
-                    <span class="text-primary-blue">Serviços de Refrigeração</span>
-                </h1>
+                <div class="text-center flex-1">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-white text-center leading-tight mb-2">
+                        Tabela de Preços
+                    </h1>
+                    <p class="text-blue-100 text-lg font-semibold">Serviços de Refrigeração</p>
+                </div>
                 <!-- Logo Direita (nova) -->
-                <img 
-                    src="logo2.jpg" 
-                    alt="Logo Secundária" 
-                    class="w-32 h-auto sm:w-40 rounded-lg shadow-md"
-                    onerror="this.onerror=null; this.src='https://placehold.co/160x60/007bff/ffffff?text=Logo+2'"
-                >
+                <div class="hidden md:block">
+                    <img 
+                        src="logo2.jpg" 
+                        alt="Logo Secundária" 
+                        class="w-32 h-auto sm:w-40 rounded-lg shadow-lg drop-shadow-xl"
+                        onerror="this.onerror=null; this.src='https://placehold.co/160x60/007bff/ffffff?text=Logo+2'"
+                    >
+                </div>
             </div>
         </header>
 
         <!-- TABELA DE SERVIÇOS -->
-        <main class="p-4 sm:p-8">
-            <h2 class="text-xl font-bold mb-4 text-dark-text border-b pb-2">Nossos Serviços</h2>
+        <main class="p-6 sm:p-10">
+            <h2 class="text-3xl font-extrabold mb-2 text-gray-900">Nossos Serviços</h2>
+            <p class="text-gray-600 mb-8 text-lg">Conheça os preços e detalhes de cada serviço oferecido</p>
 
             <!-- Tabela Responsiva (Scrollable on small screens) -->
-            <div class="overflow-x-auto shadow-lg rounded-lg">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-primary-blue text-white">
+            <div class="overflow-x-auto shadow-lg rounded-xl">
+                <table class="min-w-full divide-y divide-gray-300">
+                    <thead class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider rounded-tl-lg">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">
                                 Serviço
                             </th>
-                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider hidden md:table-cell">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider hidden md:table-cell">
                                 Detalhes
                             </th>
-                            <th scope="col" class="px-6 py-3 text-right text-sm font-semibold uppercase tracking-wider">
+                            <th scope="col" class="px-6 py-4 text-right text-sm font-bold uppercase tracking-wider">
                                 Preço
                             </th>
-                            <th scope="col" class="px-6 py-3 text-left text-sm font-semibold uppercase tracking-wider rounded-tr-lg hidden sm:table-cell">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider hidden sm:table-cell">
                                 Observações
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-100 text-dark-text">
+                    <tbody class="bg-white divide-y divide-gray-200 text-gray-800">
                         
                         <!-- Item 1: Visita Técnica -->
-                        <tr class="hover:bg-gray-50 transition duration-150">
-                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Visita Técnica</td>
+                        <tr class="hover:bg-blue-50 transition duration-200">
+                            <td class="px-6 py-4 font-bold whitespace-nowrap text-gray-900">🔧 Visita Técnica</td>
                             <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Avaliação e diagnóstico no local (1 hora)</td>
-                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 120,00</td>
-                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Valor Fixo</td>
+                            <td class="px-6 py-4 text-right font-bold text-blue-600 whitespace-nowrap text-lg">R$ 120,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-600 hidden sm:table-cell">Valor Fixo</td>
                         </tr>
                         
                         <!-- Item 2: Recarga de Fluido -->
-                        <tr class="bg-secondary-light hover:bg-gray-100 transition duration-150">
-                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Recarga de Fluido Refrigerante</td>
-                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Até 750g</td>
-                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 380,00</td>
-                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Preço para quantidades maiores a combinar.</td>
+                        <tr class="bg-gray-50 hover:bg-blue-50 transition duration-200">
+                            <td class="px-6 py-4 font-bold whitespace-nowrap text-gray-900">❄️ Recarga de Fluido</td>
+                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Até 750g de refrigerante</td>
+                            <td class="px-6 py-4 text-right font-bold text-blue-600 whitespace-nowrap text-lg">R$ 380,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-600 hidden sm:table-cell">Consulte para quantidades maiores</td>
                         </tr>
 
                         <!-- Item 3: Substituição de Compressor -->
-                        <tr class="hover:bg-gray-50 transition duration-150">
-                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Substituição de Compressor</td>
+                        <tr class="hover:bg-blue-50 transition duration-200">
+                            <td class="px-6 py-4 font-bold whitespace-nowrap text-gray-900">⚙️ Substituição de Compressor</td>
                             <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Até 1HP</td>
-                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 760,00</td>
-                            <td class="px-6 py-4 text-sm text-red-600 font-medium hidden sm:table-cell">Peça não inclusa no valor.</td>
+                            <td class="px-6 py-4 text-right font-bold text-blue-600 whitespace-nowrap text-lg">R$ 760,00</td>
+                            <td class="px-6 py-4 text-sm text-red-600 font-medium hidden sm:table-cell">Peça não inclusa</td>
                         </tr>
 
                         <!-- Item 4: Instalação de Equipamento -->
-                        <tr class="bg-secondary-light hover:bg-gray-100 transition duration-150">
-                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Instalação de Equipamento</td>
+                        <tr class="bg-gray-50 hover:bg-blue-50 transition duration-200">
+                            <td class="px-6 py-4 font-bold whitespace-nowrap text-gray-900">📦 Instalação de Equipamento</td>
                             <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Até 18.000 BTUs</td>
-                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 950,00</td>
-                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Conferir itens e complexidade da infraestrutura.</td>
+                            <td class="px-6 py-4 text-right font-bold text-blue-600 whitespace-nowrap text-lg">R$ 950,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-600 hidden sm:table-cell">Consulte complexidade</td>
                         </tr>
 
                         <!-- Item 5: Higienização Completa -->
-                        <tr class="hover:bg-gray-50 transition duration-150">
-                            <td class="px-6 py-4 font-semibold whitespace-nowrap">Higienização Completa</td>
-                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Inclui limpeza de filtros, serpentina e turbina.</td>
-                            <td class="px-6 py-4 text-right font-bold text-primary-blue whitespace-nowrap">R$ 250,00</td>
-                            <td class="px-6 py-4 text-sm text-gray-500 hidden sm:table-cell">Ideal para manutenção preventiva.</td>
+                        <tr class="hover:bg-blue-50 transition duration-200">
+                            <td class="px-6 py-4 font-bold whitespace-nowrap text-gray-900">✨ Higienização Completa</td>
+                            <td class="px-6 py-4 text-sm text-gray-700 hidden md:table-cell">Inclui limpeza completa do sistema</td>
+                            <td class="px-6 py-4 text-right font-bold text-blue-600 whitespace-nowrap text-lg">R$ 250,00</td>
+                            <td class="px-6 py-4 text-sm text-gray-600 hidden sm:table-cell">Manutenção preventiva</td>
                         </tr>
 
                     </tbody>
                 </table>
             </div>
 
-            <!-- Tabela de Preços Otimizada para Mobile -->
-            <div class="overflow-x-auto rounded-lg shadow-lg bg-white my-8">
-              <table class="min-w-full divide-y divide-gray-200 text-sm">
-                <thead class="bg-thermo-blue text-white">
+            <!-- Tabela de Preços Resumida -->
+            <div class="overflow-x-auto rounded-xl shadow-lg bg-white my-8">
+              <table class="min-w-full divide-y divide-gray-300 text-sm">
+                <thead class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
                   <tr>
-                    <th class="px-4 py-3 text-left font-bold">Serviço</th>
-                    <th class="px-4 py-3 text-left font-bold">Descrição</th>
-                    <th class="px-4 py-3 text-left font-bold">Valor</th>
+                    <th class="px-4 py-4 text-left font-bold">Serviço</th>
+                    <th class="px-4 py-4 text-left font-bold">Descrição</th>
+                    <th class="px-4 py-4 text-left font-bold">Valor</th>
                   </tr>
                 </thead>    
-                <tbody class="divide-y divide-gray-100">
-                  <tr>
-                    <td class="px-4 py-3">Manutenção Corretiva</td>
-                    <td class="px-4 py-3">Diagnóstico e reparo de falhas</td>
-                    <td class="px-4 py-3 font-semibold text-thermo-dark">Mediante Avaliação Técnica</td>
+                <tbody class="divide-y divide-gray-200">
+                  <tr class="hover:bg-blue-50 transition">
+                    <td class="px-4 py-4 font-bold text-gray-900">🔧 Manutenção Corretiva</td>
+                    <td class="px-4 py-4 text-gray-700">Diagnóstico e reparo de falhas</td>
+                    <td class="px-4 py-4 font-bold text-blue-600">Mediante Avaliação</td>
                   </tr>
-                  <tr>
-                    <td class="px-4 py-3">Higienização Completa</td>
-                    <td class="px-4 py-3">Limpeza de filtros e serpentina</td>
-                    <td class="px-4 py-3 font-semibold text-thermo-dark">R$ 380,00 </td>
+                  <tr class="bg-gray-50 hover:bg-blue-50 transition">
+                    <td class="px-4 py-4 font-bold text-gray-900">✨ Higienização Completa</td>
+                    <td class="px-4 py-4 text-gray-700">Limpeza de filtros e serpentina</td>
+                    <td class="px-4 py-4 font-bold text-blue-600">R$ 380,00 </td>
                   </tr>
-                  <tr>
-                    <td class="px-4 py-3">Instalação Ar Condicionado 12000 BTU</td>
-                    <td class="px-4 py-3">Instalação de split e cálculo de BTUs</td>
-                    <td class="px-4 py-3 font-semibold text-thermo-dark">R$ 950,00</td>
+                  <tr class="hover:bg-blue-50 transition">
+                    <td class="px-4 py-4 font-bold text-gray-900">📦 Instalação 12000 BTU</td>
+                    <td class="px-4 py-4 text-gray-700">Instalação de split com dimensionamento</td>
+                    <td class="px-4 py-4 font-bold text-blue-600">R$ 950,00</td>
                   </tr>
-                  <!-- Adicione mais linhas conforme necessário -->
                 </tbody>
               </table>
             </div>
 
-            <!-- Legenda para mobile (para Detalhes) -->
-            <p class="text-xs text-gray-500 mt-2 block md:hidden">
-                *Role a tabela para ver as observações.
+            <p class="text-xs text-gray-600 mt-4 block md:hidden">
+                💡 Role a tabela para ver mais detalhes
             </p>
         </main>
 
         <!-- OBSERVAÇÕES IMPORTANTES -->
-        <footer class="p-6 sm:p-8 bg-gray-50 rounded-b-xl border-t">
-            <h3 class="text-lg font-bold mb-3 text-dark-text">Observações Importantes:</h3>
-            <ul class="list-disc ml-5 space-y-2 text-sm text-gray-700">
-                <li>Os preços são estimativas e podem variar de acordo com a complexidade do serviço e os materiais específicos utilizados.</li>
-                <li>Valores para **peças** e **materiais** não estão inclusos no preço do serviço, a menos que explicitamente especificados.</li>
-                <li>Em caso de serviços que demandem mais tempo ou materiais adicionais, um novo orçamento detalhado será apresentado antes da execução.</li>
-                <li>Oferecemos garantia de **3 meses** para os serviços prestados, cobrindo a mão de obra.</li>
-            </ul>
-            <p class="text-xs mt-4 text-gray-500 text-center">
-                *Tabela sujeita a alterações sem aviso prévio. Consulte sempre um técnico para um orçamento final.
+        <footer class="p-8 bg-gradient-to-b from-gray-50 to-white rounded-b-2xl border-t-2 border-gray-200">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900">📋 Informações Importantes</h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-gray-800 font-semibold mb-2">💰 Preços</p>
+                    <p class="text-sm text-gray-700">Estimativas que podem variar conforme a complexidade do serviço e materiais específicos.</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                    <p class="text-sm text-gray-800 font-semibold mb-2">✅ Garantia</p>
+                    <p class="text-sm text-gray-700">Oferecemos garantia de 3 meses para a mão de obra em todos os serviços.</p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                    <p class="text-sm text-gray-800 font-semibold mb-2">🔧 Materiais</p>
+                    <p class="text-sm text-gray-700">Peças e materiais não inclusos, a menos que especificado no orçamento.</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-gray-800 font-semibold mb-2">📝 Orçamento</p>
+                    <p class="text-sm text-gray-700">Novo orçamento será fornecido antes da execução se houver mudanças.</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-600 text-center bg-gray-100 p-3 rounded-lg">
+                ⚠️ Tabela sujeita a alterações. Consulte sempre um técnico para orçamento final e atualizado.
             </p>
         </footer>
     </div>
@@ -184,10 +213,12 @@
     <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5541991285241?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20serviços%20da%20Thermodinâmica." 
        target="_blank" 
+       rel="noopener noreferrer"
        class="fixed bottom-6 right-6 z-50 
-              bg-green-500 hover:bg-green-600 transition duration-300
-              text-white font-bold p-3 rounded-full shadow-lg 
-              flex items-center space-x-2">
+              bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 transition duration-300
+              text-white font-bold p-4 rounded-full shadow-2xl hover:shadow-green-500/50
+              flex items-center space-x-2 transform hover:scale-110"
+       aria-label="Fale Conosco pelo WhatsApp">
         <span class="text-2xl">💬</span>
         <span class="hidden md:inline">Fale Conosco</span>
     </a>
