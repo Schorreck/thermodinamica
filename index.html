@@ -39,6 +39,9 @@
       "image": "http://www.thermodinamica.srv.br/logo.png", 
       "@id": "http://www.thermodinamica.srv.br",
       "url": "http://www.thermodinamica.srv.br",
+      "image": "https://www.thermodinamica.srv.br/logo.png", 
+      "@id": "https://www.thermodinamica.srv.br",
+      "url": "https://www.thermodinamica.srv.br",
       "telephone": "+55-41-3589-2796",
       "address": {
         "@type": "PostalAddress",
@@ -76,6 +79,7 @@
     <div class="container mx-auto px-4 flex items-center justify-between h-16 max-w-full">
         
         <a href="#topo" class="flex items-center space-x-2" aria-current="page">
+        <a href="index.html#topo" class="flex items-center space-x-2" aria-current="page">
             <img src="logo Thermo.jpg" alt="Logotipo Thermodinâmica Refrigeração" class="h-8 w-auto" width="32" height="32"> 
             <span class="font-bold text-blue-600 text-xl">Thermodinâmica</span>
         </a>
@@ -197,6 +201,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">O que Nossos Clientes Dizem</h2>
             <div class="max-w-xl mx-auto relative">
                 <div id="carousel" class="overflow-hidden rounded-lg shadow-lg bg-white">
+                <div id="carousel" class="overflow-hidden rounded-lg shadow-lg bg-white" aria-live="polite" aria-atomic="true" aria-label="Depoimentos de clientes">
                     <div class="testimonial p-6 flex flex-col items-center text-center">
                         <img src="caroline_oliveira_depoimento.png" alt="Depoimento de cliente Caroline Oliveira sobre manutenção de ar condicionado Thermodinâmica Curitiba" 
                              class="w-full max-w-md rounded-lg mb-4 ring-2 ring-thermo-blue" 
@@ -231,6 +236,8 @@
                     <div class="testimonial p-6 flex flex-col items-center text-center hidden">
                         <div class="w-full max-w-md h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500">
                             (Sem Imagem de Depoimento)
+                        <div class="w-full max-w-md h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500" role="img" aria-label="Imagem não disponível para o depoimento de Augusto de Souza">
+                            <span class="font-medium">Imagem não disponível</span>
                         </div>
                         <p class="text-gray-600 italic mb-4">
                             "Precisamos de um técnico com urgência e fomos atendidos na hora. O reparo foi rápido e com total transparência. Salvou nosso final de semana!"
@@ -243,6 +250,8 @@
                 </div>
                 <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Depoimento anterior">&lt;</button>
                 <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Próximo depoimento">&gt;</button>
+                <button id="prev" type="button" class="absolute left-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Depoimento anterior">&lt;</button>
+                <button id="next" type="button" class="absolute right-0 top-1/2 -translate-y-1/2 bg-thermo-blue text-white rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-thermo-dark transition" aria-label="Próximo depoimento">&gt;</button>
             </div>
         </div>
     </section>
@@ -304,6 +313,9 @@
                         <p class="text-gray-700" itemprop="text">
                             Sim, a Thermodinâmica Refrigeração atende tanto empresas quanto residências em Curitiba e toda a região metropolitana, oferecendo serviços de manutenção, instalação e higienização de ar condicionado com qualidade e confiança.
                         </p>
+                    </div>
+                </div>
+
                 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <h3 class="font-semibold text-lg text-thermo-blue mb-2" itemprop="name">
                         6. A Thermodinâmica também faz manutenções em Lavadoras - Lava e Seca?
@@ -311,6 +323,7 @@
                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p class="text-gray-700" itemprop="text">
                             Sim, a Thermodinâmica Refrigeração também atua com manutenções de lavadoras com abertura no top e sistemas lava e seca. 
+                            Sim, a Thermodinâmica Refrigeração também atua com manutenções de lavadoras com abertura no top e sistemas lava e seca.
                         </p>
                     </div>
                 </div>
@@ -333,6 +346,7 @@
     </section>
 
     <a href="https://wa.me/554199361957?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20serviços%20da%20Thermodinâmica." 
+    <a href="https://wa.me/5541999361957?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20serviços%20da%20Thermodinâmica." 
         target="_blank" 
         rel="noopener noreferrer"
         class="fixed bottom-6 right-6 z-50 
