@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso do Cliente - Thermodinâmica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f0f5 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="bg-gradient-to-br from-blue-600 via-cyan-500 to-blue-700 p-8 text-center text-white">
+            <img src="logo 3d.jpeg" alt="Logo Thermodinâmica" class="mx-auto w-24 h-auto rounded-lg mb-4 shadow-lg">
+            <h1 class="text-2xl font-extrabold mb-1">Acesso do Cliente</h1>
+            <p class="text-blue-100 text-sm">Acompanhe as manutenções do seu equipamento</p>
+        </div>
+        <form class="p-8 space-y-6">
+            <div>
+                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">E-mail</label>
+                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="seu-email@exemplo.com" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">Senha</label>
+                <input type="password" id="password" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Sua senha secreta" required>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Esqueceu sua senha?</a>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-bold py-3 px-4 rounded-lg shadow-lg hover:shadow-blue-500/50 transition duration-300 transform hover:scale-105">
+                Entrar
+            </button>
+            <p class="text-center text-sm text-gray-600 mt-6">
+                Ainda não tem cadastro? <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Registre-se aqui</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
