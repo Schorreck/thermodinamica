@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Thermodinâmica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+<body class="bg-slate-100 min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-md w-full bg-white rounded-2xl shadow-lg overflow-hidden">
+    <!-- Cabeçalho -->
+    <div class="bg-gradient-to-b from-sky-500 to-blue-600 p-6 text-center text-white">
+      <h2 class="text-2xl font-bold">Cadastro de Cliente</h2>
+      <p class="text-sm opacity-90 mt-1">Crie sua conta para acompanhar as manutenções</p>
+    </div>
+
+    <!-- Formulário -->
+    <form action="/cadastrar" method="POST" class="p-6 space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+        <input type="text" name="nome" required placeholder="Digite seu nome completo" 
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Documento</label>
+        <input type="text" name="documento" required placeholder="CPF ou CNPJ" 
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+        <input type="text" name="telefone" placeholder="(00) 00000-0000" 
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Endereço</label>
+        <textarea name="endereco" rows="3" placeholder="Rua, número, bairro, cidade..." 
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
+      </div>
+
+      <div class="my-4">
+  <label class="block text-sm font-medium text-gray-700 mb-1">
+    Confirme que não é um robô: Quanto é <span id="num1" class="font-bold"></span> + <span id="num2" class="font-bold"></span>?
+  </label>
+  <input type="number" id="captcha-input" required placeholder="Digite o resultado" 
+    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:outline-none">
+</div>
+
+<script>
+  const formulario = document.querySelector('form');
+  const n1 = Math.floor(Math.random() * 9) + 1;
+  const n2 = Math.floor(Math.random() * 9) + 1;
+  const somaCorreta = n1 + n2;
+
+  document.getElementById('num1').textContent = n1;
+  document.getElementById('num2').textContent = n2;
+
+  formulario.addEventListener('submit', function(e) {
+    const resposta = parseInt(document.getElementById('captcha-input').value, 10);
+    if (resposta !== somaCorreta) {
+      e.preventDefault();
+      alert('Resultado do teste anti-robô incorreto. Tente novamente!');
+    }
+  });
+</script>
+      <button type="submit" 
+        class="w-full py-3 bg-cyan-400 hover:bg-cyan-500 text-white font-semibold rounded-lg shadow transition">
+        Finalizar Cadastro
+      </button>
+
+      <div class="text-center mt-4 text-sm text-gray-600">
+        Já possui cadastro? 
+        <a href="acesso.html" class="text-sky-600 font-semibold hover:underline">Acesse aqui</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
